@@ -23,8 +23,8 @@ jobs:
         pip install pytest pytest-cov flake8
 
     - name: Run tests
-      run: |
-        pytest --cov=cart.py --cov-report=term-missing
+  run: |
+    pytest Project/ --cov=Project/cart --cov-report=term-missing
 
     - name: Run linter
       run: |

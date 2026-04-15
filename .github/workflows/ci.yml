@@ -10,22 +10,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-    - name: Install dependencies
-      run: |
-        pip install pytest pytest-cov flake8
+      - name: Install dependencies
+        run: |
+          pip install pytest pytest-cov flake8
 
-    - name: Run tests
-  run: |
-    pytest Project/ --cov=Project/cart --cov-report=term-missing
+      - name: Run tests
+        run: |
+          pytest Project/ --cov=Project/cart --cov-report=term-missing
 
-    - name: Run linter
-      run: |
-        flake8 .
+      - name: Run linter
+        run: |
+          flake8 .
